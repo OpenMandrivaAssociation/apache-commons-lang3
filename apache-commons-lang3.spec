@@ -1,10 +1,10 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 %global base_name       lang
 %global short_name      commons-%{base_name}3
 
 Name:           apache-%{short_name}
 Version:        3.1
-Release:        7.0%{?dist}
+Release:        7.1%{?dist}
 Summary:        Provides a host of helper utilities for the java.lang API
 License:        ASL 2.0
 URL:            http://commons.apache.org/%{base_name}
