@@ -3,8 +3,8 @@
 %global short_name      commons-%{base_name}3
 
 Name:           apache-%{short_name}
-Version:        3.1
-Release:        7.1%{?dist}
+Version:        3.3.2
+Release:        1
 Summary:        Provides a host of helper utilities for the java.lang API
 License:        ASL 2.0
 URL:            http://commons.apache.org/%{base_name}
@@ -18,9 +18,6 @@ BuildRequires:  mvn(org.apache.maven.plugins:maven-assembly-plugin)
 %if 0%{?rhel} <= 0
 BuildRequires:  mvn(org.easymock:easymock)
 %endif
-
-# FIXME apparently will only pass with java6
-Patch0:         %{name}-check.patch
 
 %description
 The standard Java libraries fail to provide enough methods for
@@ -47,7 +44,7 @@ Summary:        API documentation for %{name}
 
 %prep
 %setup -q -n %{short_name}-%{version}-src
-%patch0 -p1
+
 %mvn_file : %{name} %{short_name}
 
 %build
