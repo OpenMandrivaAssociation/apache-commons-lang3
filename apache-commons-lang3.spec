@@ -4,7 +4,7 @@
 
 Name:           apache-%{short_name}
 Version:        3.3.2
-Release:        2
+Release:        3
 Summary:        Provides a host of helper utilities for the java.lang API
 License:        ASL 2.0
 URL:            http://commons.apache.org/%{base_name}
