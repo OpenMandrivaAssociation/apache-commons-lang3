@@ -4,7 +4,7 @@
 
 Name:           apache-%{short_name}
 Version:        3.3.2
-Release:        4
+Release:        5
 Summary:        Provides a host of helper utilities for the java.lang API
 License:        ASL 2.0
 URL:            http://commons.apache.org/%{base_name}
@@ -13,7 +13,7 @@ BuildArch:      noarch
 
 BuildRequires:  maven-local
 BuildRequires:  mvn(commons-io:commons-io)
-BuildRequires:  mvn(org.apache.commons:commons-parent)
+BuildRequires:  mvn(org.apache.commons:commons-parent:pom:)
 BuildRequires:  mvn(org.apache.maven.plugins:maven-assembly-plugin)
 %if 0%{?rhel} <= 0
 BuildRequires:  mvn(org.easymock:easymock)
