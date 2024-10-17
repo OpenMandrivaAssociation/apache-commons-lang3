@@ -7,7 +7,7 @@ Version:        3.3.2
 Release:        7
 Summary:        Provides a host of helper utilities for the java.lang API
 License:        ASL 2.0
-URL:            http://commons.apache.org/%{base_name}
+URL:            https://commons.apache.org/%{base_name}
 Source0:        http://archive.apache.org/dist/commons/%{base_name}/source/%{short_name}-%{version}-src.tar.gz
 BuildArch:      noarch
 
