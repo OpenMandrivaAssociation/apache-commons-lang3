@@ -3,8 +3,8 @@
 %global short_name      commons-%{base_name}3
 
 Name:           apache-%{short_name}
-Version:        3.3.2
-Release:        7
+Version:        3.20.0
+Release:        1
 Summary:        Provides a host of helper utilities for the java.lang API
 License:        ASL 2.0
 URL:            https://commons.apache.org/%{base_name}
@@ -43,7 +43,7 @@ Summary:        API documentation for %{name}
 %{summary}.
 
 %prep
-%setup -q -n %{short_name}-%{version}-src
+%setup -q -n commons-lang3-3.20.0-src
 
 %mvn_file : %{name} %{short_name}
 
