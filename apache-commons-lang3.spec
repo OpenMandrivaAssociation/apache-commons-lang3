@@ -9,6 +9,9 @@ Source0:	https://archive.apache.org/dist/commons/lang/source/commons-lang3-%{ver
 
 BuildArch:	noarch
 BuildRequires:	mvn(org.apache.commons:commons-parent:pom:)
+# Literal, so the first rpmbuild -bs records them before sysjar is installed.
+BuildRequires:	maven
+BuildRequires:	java-current-devel
 BuildSystem:	maven
 BuildOption(install):	--file-name commons-lang3 --link %{name} --alias commons-lang3:commons-lang3
 
