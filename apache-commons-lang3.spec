@@ -1,6 +1,6 @@
 Name:		apache-commons-lang3
-Version:	3.21.0
-Release:	2
+Version:	3.22.0
+Release:	1
 Summary:	Helper utilities for the java.lang API
 Group:		Development/Java
 License:	ASL 2.0
@@ -19,7 +19,7 @@ BuildOption(install):	--file-name commons-lang3 --link %{name} --alias commons-l
 
 %description
 Apache Commons Lang provides extra methods for classes in java.lang.
-3.21.0 stays the default jar. Gradle 9.9.1 strictly pins 3.20.0, so
+3.22.0 stays the default jar. Gradle 9.9.1 strictly pins 3.20.0, so
 that jar is installed beside it.
 
 %prep
@@ -85,8 +85,8 @@ public class LangSmoke {
 EOF
 "$JAVA_HOME/bin/javac" --release 8 -encoding UTF-8 -Xlint:-options \
 	-cp %{buildroot}%{_javadir}/commons-lang3.jar LangSmoke.java
-"$JAVA_HOME/bin/java" -cp "%{buildroot}%{_javadir}/commons-lang3.jar:." LangSmoke lang321_ok | tee check321.log
-grep -F -q 'lang321_ok abab' check321.log
+"$JAVA_HOME/bin/java" -cp "%{buildroot}%{_javadir}/commons-lang3.jar:." LangSmoke lang322_ok | tee check322.log
+grep -F -q 'lang322_ok abab' check322.log
 "$JAVA_HOME/bin/javac" --release 8 -encoding UTF-8 -Xlint:-options \
 	-cp %{buildroot}%{_javadir}/commons-lang3-3.20.0.jar LangSmoke.java
 "$JAVA_HOME/bin/java" -cp "%{buildroot}%{_javadir}/commons-lang3-3.20.0.jar:." LangSmoke lang320_ok | tee check320.log
